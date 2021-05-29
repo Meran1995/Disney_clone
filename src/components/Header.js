@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import styled from 'styled-components';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -36,7 +37,8 @@ const Header = (props) => {
 					alert(error.message);
 				});
 		} else if (userName) {
-			auth.signOut()
+			auth
+				.signOut()
 				.then(() => {
 					dispatch(setSignOutState());
 					history.push('/');
