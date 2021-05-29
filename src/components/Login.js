@@ -5,9 +5,14 @@ const Login = (props) => {
 		<Container>
 			<Content>
 				<CTA>
-					<Lol>I am making a DISNEY+ clone with codeing...</Lol>
 					<CtALogoOne src='/images/cta-logo-one.svg' alt='' />
-					<Lol>Hello My Name is MerAn... 🚀🚀Moon 🔥🔥🔥 baby🚀🚀</Lol>
+					<SignUp>GET ALL THERE</SignUp>
+					<Description>
+						Get Premier Access to Raya and the Last Dragon for an additinal fee
+						with a Disney+ subscription. As of 03/01/2021, the price of Disney+
+						and The Disney Bundle will increase by 1$.
+					</Description>
+					<CtALogoTwo src='/images/cta-logo-two.png' alt='' />
 				</CTA>
 				<BgImage />
 			</Content>
@@ -50,6 +55,10 @@ const BgImage = styled.div`
 `;
 
 const CTA = styled.div`
+	max-width: 600px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
 `;
 const CtALogoOne = styled.img`
 	margin-bottom: 12px;
@@ -57,10 +66,38 @@ const CtALogoOne = styled.img`
 	min-height: 1px;
 	display: block;
 	width: 100%;
-	margin-left: 25vh;
 `;
-const Lol = styled.div`
-	margin: 10vh 0;
-	font-size: 40px;
+const SignUp = styled.a`
+	font-weight: bold;
+	color: #f9f9f9;
+	background-color: #0063e5;
+	margin-bottom: 12px;
+	width: 100%;
+	letter-spacing: 1.5px;
+	font-size: 18px;
+	padding: 17px 0;
+	border: 1px solid transparent;
+	border-radius: 4px;
+
+	&:hover {
+		background-color: #0483ee;
+	}
 `;
+
+const Description = styled.p`
+	color: hsla(0, 0%, 96%, 1);
+	font-size: 12px;
+	margin: 0 0 24px;
+	line-height: 1.5;
+	letter-spacing: 5px;
+`;
+
+const CtALogoTwo = styled.img`
+	max-width: 600px;
+	margin-bottom: 20px;
+	display: inline-block;
+	vertical-align: bottom;
+	width: 100%;
+`;
+
 export default Login;
