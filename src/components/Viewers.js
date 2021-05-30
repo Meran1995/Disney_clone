@@ -65,7 +65,6 @@ const Wrap = styled.div`
 	border: 3px solid rgba(249, 249, 249, 0.1);
 
 	img {
-		inset: 0;
 		display: block;
 		height: 100%;
 		object-fit: cover;

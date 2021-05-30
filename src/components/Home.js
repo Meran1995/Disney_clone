@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import ImgSlider from './ImgSlider';
+import Recommands from './Recommends';
 import Viewers from './Viewers';
 
 const Home = (props) => {
@@ -7,6 +8,7 @@ const Home = (props) => {
 		<Container>
 			<ImgSlider />
 			<Viewers />
+			<Recommands />
 		</Container>
 	);
 };
@@ -23,7 +25,6 @@ const Container = styled.div`
 		background: url('/images/home-background.png') center no-repeat fixed;
 		content: '';
 		position: absolute;
-		inset: 0px;
 		opacity: 1;
 		z-index: -1;
 	}
