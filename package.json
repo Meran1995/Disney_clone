@@ -42,5 +42,10 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
-	}
+	},
+	"description": "Disney app for my portfolio",
+	"main": "app.js",
+	"repository": "git@github.com:Meran1995/Disney_clone.git",
+	"author": "meran <meranzakelijk@gmail.com>",
+	"license": "MIT"
 }
