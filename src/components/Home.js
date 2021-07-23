@@ -22,12 +22,12 @@ const Home = (props) => {
 	let trending = [];
 
 	useEffect(() => {
-		console.log('hello');
+		console.log('1');
 		db.collection('movies').onSnapshot((snapshot) => {
-			
 			// eslint-disable-next-line array-callback-return
 			snapshot.docs.map((doc) => {
-				console.log(recommends);
+				console.log('2');
+
 				switch (doc.data().type) {
 					case 'recommend':
 						recommends = [...recommends, { id: doc.id, ...doc.data() }];

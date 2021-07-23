@@ -1,43 +1,24 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { selectOriginals } from '../features/movie/movieSlice';
 
 const Originals = () => {
+	const movies = useSelector(selectOriginals);
+
 	return (
 		<Container>
-			<h4>Originals Content</h4>
+			<h4>Originals</h4>
 			<Content>
-				<Wrap>
-					<Link to=''>
-						<img
-							src='https://static.posters.cz/image/1300/posters/marvel-captain-america-i34925.jpg'
-							alt=''
-						/>
-					</Link>
-				</Wrap>
-				<Wrap>
-					<Link to=''>
-						<img
-							src='https://static.posters.cz/image/1300/posters/marvel-captain-america-i34925.jpg'
-							alt=''
-						/>
-					</Link>
-				</Wrap>
-				<Wrap>
-					<Link to=''>
-						<img
-							src='https://static.posters.cz/image/1300/posters/marvel-captain-america-i34925.jpg'
-							alt=''
-						/>
-					</Link>
-				</Wrap>
-				<Wrap>
-					<Link to=''>
-						<img
-							src='https://static.posters.cz/image/1300/posters/marvel-captain-america-i34925.jpg'
-							alt=''
-						/>
-					</Link>
-				</Wrap>
+				{movies &&
+					movies.map((movie, key) => (
+						<Wrap key={key}>
+							{movie.id}
+							<Link to={'/detail/' + movie.id}>
+								<img src={movie.cardImg} alt={movie.title} />
+							</Link>
+						</Wrap>
+					))}
 			</Content>
 		</Container>
 	);
